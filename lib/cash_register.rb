@@ -6,7 +6,7 @@ class CashRegister
   def initialize(discount=0) #because this is optional we're setting a default value that can be overriden
     @total = 0
     @discount = discount #otherwise discount will be nil
-    @cart = []
+    @items = []
   end
 
   def total
@@ -15,7 +15,7 @@ class CashRegister
 
   def add_item(title, price, quantity=1)
     @total = @total + (price * quantity)
-    @cart << title
+    @items << title
   end
 
   def apply_discount
