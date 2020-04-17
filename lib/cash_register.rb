@@ -16,6 +16,7 @@ class CashRegister
     @total = @total + (price * quantity)
     quantity.times do
       @items << title #wants repeat items
+    end
   end
 
   def apply_discount
