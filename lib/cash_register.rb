@@ -2,6 +2,7 @@ require 'pry'
 
 class CashRegister
   attr_accessor :discount, :total, :items
+  @@cart==[]
 
   def initialize(discount=0) #because this is optional we're setting a default value that can be overriden
     @total = 0
@@ -14,6 +15,7 @@ class CashRegister
 
   def add_item(title, price, quantity=1)
     @total = @total + (price * quantity)
+    title>> @@cart
   end
 
   def apply_discount
@@ -23,7 +25,9 @@ class CashRegister
     else
       return "There is no discount to apply."
     end
-
   end
+
+  def items
+
 
 end
